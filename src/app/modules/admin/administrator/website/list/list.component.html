@@ -1,0 +1,297 @@
+<div class="flex flex-col flex-auto min-w-0 bg-card dark:bg-transparent">
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+        <div class="flex-1 min-w-0">
+            <!-- Title -->
+            <div class="mt-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                    จัดการเซลเพจ
+                </h2>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex-auto p-3 sm:p-10">
+        <form class="flex flex-col mt-3 pb-4 bg-card shadow overflow-hidden ng-valid" [formGroup]="formData">
+            <div class="flex flex-col sm:flex-row p-8">
+                <div class="flex flex-auto flex-wrap">
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_1" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_1($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1744 × 831 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_1" [removable]="true" [file]="f" (removed)="onRemove_1(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_2" class="h-auto w-70 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_2($event)">
+                                    <ngx-dropzone-label>รูปภาพ 360 × 580 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_2" [removable]="true" [file]="f" (removed)="onRemove_2(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_3" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_3($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1628 × 945 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_3" [removable]="true" [file]="f" (removed)="onRemove_3(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_4" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_4($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1903 × 2651 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_4" [removable]="true" [file]="f" (removed)="onRemove_4(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_5" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_5($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1920 × 880 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_5" [removable]="true" [file]="f" (removed)="onRemove_5(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_6" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_6($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1920 × 1649 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_6" [removable]="true" [file]="f" (removed)="onRemove_6(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_7" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_7($event)">
+                                    <ngx-dropzone-label>รูปภาพ 644 × 689 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_7" [removable]="true" [file]="f" (removed)="onRemove_7(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_8" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_8($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1920 × 1200 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_8" [removable]="true" [file]="f" (removed)="onRemove_8(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5 items-center">
+                        <div class="border-gray-200">
+                            <img class="img" [src]="itemData.image_9" class="h-auto w-120 transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+
+                            <div class=" w-full flex-wrap justify-start">
+                                <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect_9($event)">
+                                    <ngx-dropzone-label>รูปภาพ 1920 × 787 px</ngx-dropzone-label>
+                                    <ngx-dropzone-image-preview *ngFor="let f of files_9" [removable]="true" [file]="f" (removed)="onRemove_9(f)">
+                                    </ngx-dropzone-image-preview>
+                                </ngx-dropzone>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 sm:pl-8 mt-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>Youtube
+                                </mat-label>
+                                <input matInput [formControlName]="'youtube_1'">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-2/4 sm:pl-8 mt-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>Youtube Review 1
+                                </mat-label>
+                                <input matInput [formControlName]="'youtube_2'">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-2/4 sm:pl-8 mt-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>Youtube Review 2
+                                </mat-label>
+                                <input matInput [formControlName]="'youtube_3'">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-2/4 sm:pl-8 mt-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>Line Link
+                                </mat-label>
+                                <input matInput [formControlName]="'line'">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-2/4 sm:pl-8 mt-5">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>Facebook Link
+                                </mat-label>
+                                <input matInput [formControlName]="'facebook'">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="flex flex-col w-full lg:w-4/4 mt-5 p-5 items-center">
+                        <div class="flex flex-wrap items-center -mx-1 ng-star-inserted">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- button -->
+            <div class="flex items-center justify-end w-full border-t px-8 py-4">
+                <div class="flex items-center justify-end">
+                    <button class="px-6 ml-3 mat-primary" mat-flat-button (click)="update()">
+                        <mat-icon svgIcon="heroicons_solid:check"></mat-icon>
+                        บันทึก
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

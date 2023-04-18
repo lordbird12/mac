@@ -1,0 +1,210 @@
+<div class="flex flex-col flex-auto min-w-0 bg-card dark:bg-transparent">
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+        <div class="flex-1 min-w-0">
+            <!-- Title -->
+            <div class="mt-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                    สั่งซื้อสินค้า
+                </h2>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex-auto p-3 sm:p-10">
+        <form class="flex flex-col mt-3 pb-4 bg-card shadow overflow-hidden ng-valid" [formGroup]="formData">
+            <div class="flex flex-col sm:flex-row p-8">
+
+
+                <div class="flex flex-auto flex-wrap">
+
+
+                    <div class="flex flex-col w-full lg:w-3/3 sm:pl-8">
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>หัวข้อ
+                                </mat-label>
+                                <input matInput value="ขั้นตอนการสั่งสินค้าจากจีนกับ Fast Cargo">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+                    <div class="flex flex-col w-full lg:w-1/6 sm:pl-8">
+                        <div class="flex">
+                                <div class=" w-full flex flex-wrap justify-start mt-3">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-5/6 lg:pl-8">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>ข้อความ
+                                </mat-label>
+                                <input matInput value="ติดต่อฝ่ายขาย ลูกค้าติดต่อเข้ามาที่ฝ่ายขาย เพื่อขอรับรหัสสินค้าเพื่อติดที่หน้าหีบห่อห่บกล่องสินค้า">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-1/6 sm:pl-8 mt-3">
+                        <div class="flex">
+                                <div class=" w-full flex flex-wrap justify-start">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-5/6 lg:pl-8">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>ข้อความ
+                                </mat-label>
+                                <input matInput value="ติดต่อโรงงานลูกค้าติดต่อโรงงาน/ร้านค้า ในประเทศจีนพร้อมแจ้งรหัสโกดังของ Fast Cargo เพื่อให้ขนส่งสินค้าไปที่โกดังของเราในประเทศจีน">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-1/6 sm:pl-8">
+                        <div class="flex">
+                                <div class=" w-full flex flex-wrap justify-start mt-3">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-5/6 lg:pl-8">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>ข้อความ
+                                </mat-label>
+                                <input matInput value="เมื่อสินค้าเข้าโกดังเมื่อสินค้าเข้าโกดังของ Fast Cargo เราจะวัดขนาด ชั่งน้ำหนัก และตรวจสอบสินค้า ก่อนที่จะดำเนินการจัดส่ง ทางรถจัดส่งได้ภายใน 5 – 7 วันทำการ ทางเรือจัดส่งได้ภายใน 15 – 20 วัน">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-1/6 sm:pl-8 mt-3">
+                        <div class="flex">
+                                <div class=" w-full flex flex-wrap justify-start">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-5/6 lg:pl-8">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>ข้อความ
+                                </mat-label>
+                                <input matInput value="ทีมงานติดต่อลูกค้าทีมงานจะติดต่อไปยังลูกค้าเมื่อสินค้าเดินทางมาถึงที่โกดังสินค้าภายในประเทศ">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-1/6 sm:pl-8">
+                        <div class="flex">
+                                <div class=" w-full flex flex-wrap justify-start mt-3">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full lg:w-5/6 lg:pl-8">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>ข้อความ
+                                </mat-label>
+                                <input matInput value="ชำระค่าบริการลูกค้าต้องชำระค่าบริการขนส่ง พร้อมส่งหลักฐานมายังฝ่ายขาย">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col w-full lg:w-1/6 sm:pl-8 mt-3">
+                        <div class="flex">
+                                <div class=" w-full flex flex-wrap justify-start">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                        </div>
+                    </div>                                     
+
+                    <div class="flex flex-col w-full lg:w-1/6 lg:pl-8">
+                        <!--firstname and lastname-->
+                        <div class="flex">
+                            <mat-form-field class="w-full">
+                                <mat-label>ข้อความ
+                                </mat-label>
+                                <input matInput value="รอรับสินค้าจากเราดำเนินการจัดส่งสินค้าไปยังบ้าน/โกดังสินค้าของลูกค้า หรือลูกค้าสามารถเดินทางมารับสินค้าได้ที่โกดังของ Fast Cargo">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full lg:w-4/4 mt-5 p-5 items-center">
+                        <div class="flex flex-wrap items-center -mx-1 ng-star-inserted">
+                        </div>
+                    </div>
+
+                    <!-- <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <div class="border-t border-gray-200">
+                            <img class="img" src="http://localhost:9080/fastcargo/template_four/assets/img/bg/bread-bg2.jpg" class="h-auto w-full transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl">
+
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="flex flex-col w-full lg:w-4/4 p-5">
+                        <div class="border-t border-gray-200">
+                            <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                                <div class=" flex flex-wrap justify-start">
+                                    <ngx-dropzone style="width: 100%; height: 120px; justify-content: center;" (change)="onSelect($event)">
+                                        <ngx-dropzone-label>รูปภาพ</ngx-dropzone-label>
+                                        <ngx-dropzone-image-preview *ngFor="let f of files" [removable]="true" [file]="f" (removed)="onRemove(f)">
+                                        </ngx-dropzone-image-preview>
+                                    </ngx-dropzone>
+                                </div>
+                            </dd>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <!-- button -->
+            <div class="flex items-center justify-end w-full border-t px-8 py-4">
+                <div class="flex items-center justify-end">
+                    <button class="px-6 ml-3 mat-primary" mat-flat-button (click)="update()">
+                        <mat-icon svgIcon="heroicons_solid:check"></mat-icon>
+                        บันทึก
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

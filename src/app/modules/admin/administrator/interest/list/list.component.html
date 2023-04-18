@@ -1,0 +1,51 @@
+<div class="sm:absolute sm:inset-0 flex flex-col flex-auto min-w-0 sm:overflow-hidden bg-card dark:bg-transparent">
+
+    <!-- Header -->
+    <div class="relative flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between py-8 px-6 md:px-8 border-b">
+        <!-- Loader -->
+        <div class="absolute inset-x-0 bottom-0" *ngIf="isLoading">
+            <mat-progress-bar [mode]="'indeterminate'"></mat-progress-bar>
+        </div>
+        <!-- Title -->
+        <div class="text-4xl font-extrabold tracking-tight">รายชื่อผู้สนใจ</div>
+
+    </div>
+
+    <!-- Main -->
+    <div class="flex flex-auto overflow-hidden">
+
+        <!-- Products list -->
+        <div class="flex flex-col flex-auto p-5 overflow-hidden sm:overflow-y-auto">
+            <table datatable [dtOptions]="dtOptions" class="table row-border hover" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>ชิ้อผู้ส่ง</th>
+                        <th>บริษัท</th>
+                        <th>เบอร์โทร</th>
+                        <th>อีเมล์</th>
+                        <th>จังหวัด</th>
+                        <th>รายละเอียด</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="dataRow?.length != 0">
+                    <tr *ngFor="let item of dataRow; let i = index">
+                        <td>{{ pages.begin + (i + 1) }}</td>
+                        <td>{{ item.txt_1 }}</td>
+                        <td>{{ item.txt_2 }}</td>
+                        <td>{{ item.txt_3 }}</td>
+                        <td>{{ item.txt_4 }}</td>
+                        <td>{{ item.txt_5 }}</td>
+                        <td>{{ item.txt_6 }}</td>
+                    </tr>
+                </tbody>
+                <tbody *ngIf="dataRow?.length == 0">
+                    <tr>
+                        <td colspan="6" class="no-data-available text-center">ไม่มีข้อมูล !</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
